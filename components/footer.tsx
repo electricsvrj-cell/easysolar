@@ -84,8 +84,8 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-white mt-0.5" />
                 <div>
                   <p className="font-medium">Email Us</p>
-                  <a href="mailto:support@easysolarsolution.com.au" className="text-primary-foreground/80 hover:text-white transition-colors">
-                    support@easysolarsolution.com.au
+                  <a href="mailto:info@easysolarsolution.com.au" className="text-primary-foreground/80 hover:text-white transition-colors">
+                    info@easysolarsolution.com.au
                   </a>
                 </div>
               </li>

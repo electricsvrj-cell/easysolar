@@ -164,7 +164,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section - Image Slider */}
-      <section className="relative pt-20 lg:pt-24 overflow-hidden">
+      <section className="relative pt-20 lg:pt-24 overflow-hidden bg-background">
         <div className="mx-auto max-w-[1440px]">
           <Carousel
             opts={{
@@ -180,20 +180,41 @@ export default function HomePage() {
           >
             <CarouselContent>
               {[
-                "/images/easter-special.png"
-              ].map((src, index) => (
+                { 
+                  src: "/images/easter-special.png", 
+                  mobSrc: "/images/mob-slider-1.png.jpeg",
+                  alt: "Easter Special Solar Energy 48kWh" 
+                },
+                { 
+                  src: "/images/easter-special-2.png", 
+                  mobSrc: "/images/mob-slider-2.png.jpeg",
+                  alt: "Easter Special Solar Energy 27kWh" 
+                }
+              ].map((item, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative w-full h-auto">
-                    <Image
-                      src={src}
-                      alt="Easter Special Solar Energy"
-                      width={1920}
-                      height={640}
-                      sizes="100vw"
-                      style={{ width: '100%', height: 'auto' }}
-                      priority
-                    />
-                    {/* Overlay Removed as per request */}
+                  <div className="relative w-full overflow-hidden">
+                    {/* Desktop Image */}
+                    <div className="hidden md:block">
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        width={1920}
+                        height={640}
+                        className="w-full h-auto"
+                        priority={index === 0}
+                      />
+                    </div>
+                    {/* Mobile Image */}
+                    <div className="block md:hidden">
+                      <Image
+                        src={item.mobSrc}
+                        alt={item.alt}
+                        width={1080}
+                        height={1350}
+                        className="w-full h-auto"
+                        priority={index === 0}
+                      />
+                    </div>
                   </div>
                 </CarouselItem>
               ))}

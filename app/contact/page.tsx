@@ -29,9 +29,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    detail: "support@easysolarsolution.com.au",
+    detail: "info@easysolarsolution.com.au",
     subDetail: "We respond within 24 hours",
-    href: "mailto:support@easysolarsolution.com.au"
+    href: "mailto:info@easysolarsolution.com.au"
   },
   {
     icon: MapPin,
@@ -79,7 +79,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -323,8 +323,8 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full h-14 text-lg bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-red-600/20 active:scale-95 flex items-center justify-center gap-2"
                   >

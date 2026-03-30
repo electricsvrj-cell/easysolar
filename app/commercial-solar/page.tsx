@@ -7,12 +7,12 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { QuoteModal } from "@/components/quote-modal"
 import { Button } from "@/components/ui/button"
-import { 
-  Building2, 
-  Shield, 
+import {
+  Building2,
+  Shield,
   Award,
-  CheckCircle2, 
-  ArrowRight, 
+  CheckCircle2,
+  ArrowRight,
   Zap,
   TrendingDown,
   Clock,
@@ -80,13 +80,13 @@ export default function CommercialSolarPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24 bg-primary">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
         </div>
-        
+
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-primary-foreground/70 mb-6">
@@ -101,17 +101,17 @@ export default function CommercialSolarPage() {
                 <Building2 className="h-4 w-4 text-white" />
                 <span className="text-sm font-medium text-white">Business Solutions</span>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 font-[family-name:var(--font-space-grotesk)]">
                 <span className="text-balance">Commercial</span>{" "}
                 <span className="text-white">
-                  Solar Power
+                  Solar Power test
                 </span>
               </h1>
-              
+
               <p className="text-lg lg:text-xl text-primary-foreground/90 mb-8">
-                Transform your business with commercial solar. Reduce operating costs, improve sustainability, 
-                and take advantage of government incentives. Our expert team designs and installs systems 
+                Transform your business with commercial solar. Reduce operating costs, improve sustainability,
+                and take advantage of government incentives. Our expert team designs and installs systems
                 from 30kW to multi-megawatt scale.
               </p>
 
@@ -126,9 +126,9 @@ export default function CommercialSolarPage() {
                   <p className="text-sm text-primary-foreground/70">Total Capacity</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
+                <Button
                   onClick={() => setQuoteModalOpen(true)}
                   size="lg"
                   className="bg-secondary text-white hover:bg-secondary/90 font-semibold px-10 shadow-lg shadow-secondary/20 transition-all hover:scale-105"
@@ -136,7 +136,7 @@ export default function CommercialSolarPage() {
                   Get Commercial Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
+                <Button
                   variant="outline"
                   size="lg"
                   className="border-white/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 rounded-full transition-all"
@@ -176,11 +176,11 @@ export default function CommercialSolarPage() {
             <div className="h-1 w-16 bg-red-500 mx-auto mb-10"></div>
             <div className="space-y-8 text-lg lg:text-xl text-muted-foreground/80 leading-relaxed">
               <p>
-                Installing a solar system for business growth is an up-and-coming investment and has an outstanding record. 
+                Installing a solar system for business growth is an up-and-coming investment and has an outstanding record.
                 Lowering your company&apos;s electricity costs might help you invest funds more wisely than draining your capital on unnecessary expenditures.
               </p>
               <p>
-                Going Solar demonstrates your company&apos;s commitment to responsible, environmentally sustainable, and clever development strategies to pursue excellence. 
+                Going Solar demonstrates your company&apos;s commitment to responsible, environmentally sustainable, and clever development strategies to pursue excellence.
                 Continue reading to discover how solar systems help when installed in business settings for industry-related purposes.
               </p>
             </div>
@@ -188,8 +188,8 @@ export default function CommercialSolarPage() {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/images/commercial-solar.jpg" 
+              <Image
+                src="/images/commercial-solar.jpg"
                 alt="Large scale commercial solar installation"
                 width={800}
                 height={600}
@@ -218,31 +218,31 @@ export default function CommercialSolarPage() {
           </div>
 
           <div className="mt-32">
-             <div className="text-center max-w-4xl mx-auto mb-20">
-                <h3 className="text-3xl lg:text-4xl font-bold text-muted-foreground/40 mb-8 font-[family-name:var(--font-space-grotesk)]">
-                  What are some ways a commercial solar system might help you save money?
-                </h3>
-                <p className="text-xl text-muted-foreground/80 leading-relaxed">
-                  A financial benefit is one of the numerous important reasons to install a commercial solar system. 
-                  If you finance the initial investment, your commercial solar system will often create enough benefit to generate a positive cash flow within twenty-four months. 
-                  Your solar PV investment will quickly pay for itself, reduce your carbon footprint, and provide you with a large portion of your energy solutions for free when your loan term finishes.
-                </p>
-             </div>
+            <div className="text-center max-w-4xl mx-auto mb-20">
+              <h3 className="text-3xl lg:text-4xl font-bold text-muted-foreground/40 mb-8 font-[family-name:var(--font-space-grotesk)]">
+                What are some ways a commercial solar system might help you save money?
+              </h3>
+              <p className="text-xl text-muted-foreground/80 leading-relaxed">
+                A financial benefit is one of the numerous important reasons to install a commercial solar system.
+                If you finance the initial investment, your commercial solar system will often create enough benefit to generate a positive cash flow within twenty-four months.
+                Your solar PV investment will quickly pay for itself, reduce your carbon footprint, and provide you with a large portion of your energy solutions for free when your loan term finishes.
+              </p>
+            </div>
 
-             <div className="grid md:grid-cols-3 gap-10">
-                {[
-                  { icon: Lightbulb, title: "Latest Solar Technology" },
-                  { icon: TrendingUp, title: "Guaranteed Performance" },
-                  { icon: Award, title: "Premium Quality Solar" }
-                ].map((card, index) => (
-                  <div key={index} className="p-10 bg-muted/30 rounded-[40px] border border-border/50 text-center flex flex-col items-center group hover:bg-white hover:shadow-2xl transition-all duration-300">
-                    <div className="w-28 h-28 rounded-3xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                      <card.icon className="h-14 w-14 text-red-500" />
-                    </div>
-                    <h4 className="text-2xl font-bold text-[#0B2A4D]">{card.title}</h4>
+            <div className="grid md:grid-cols-3 gap-10">
+              {[
+                { icon: Lightbulb, title: "Latest Solar Technology" },
+                { icon: TrendingUp, title: "Guaranteed Performance" },
+                { icon: Award, title: "Premium Quality Solar" }
+              ].map((card, index) => (
+                <div key={index} className="p-10 bg-muted/30 rounded-[40px] border border-border/50 text-center flex flex-col items-center group hover:bg-white hover:shadow-2xl transition-all duration-300">
+                  <div className="w-28 h-28 rounded-3xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                    <card.icon className="h-14 w-14 text-red-500" />
                   </div>
-                ))}
-             </div>
+                  <h4 className="text-2xl font-bold text-[#0B2A4D]">{card.title}</h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -271,24 +271,24 @@ export default function CommercialSolarPage() {
                 <div className="p-10 flex-grow flex flex-col">
                   <h3 className="text-6xl font-black text-[#0B2A4D] mb-4">{pkg.size}</h3>
                   <p className="text-muted-foreground font-extrabold text-xl mb-12 uppercase tracking-wide">{pkg.suitable}</p>
-                  
+
                   <div className="grid grid-cols-2 gap-6 mb-12 pt-10 border-t border-border">
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 flex items-center justify-center mb-3">
-                         <Sun className="h-12 w-12 text-[#0B2A4D]" />
+                        <Sun className="h-12 w-12 text-[#0B2A4D]" />
                       </div>
                       <p className="text-base font-black text-[#0B2A4D] uppercase tracking-tighter">Tier 1 Panels</p>
                     </div>
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 flex items-center justify-center mb-3">
-                         <Battery className="h-12 w-12 text-[#0B2A4D]" />
+                        <Battery className="h-12 w-12 text-[#0B2A4D]" />
                       </div>
                       <p className="text-base font-black text-[#0B2A4D] uppercase tracking-tighter leading-tight">{pkg.features[1]}</p>
                     </div>
                   </div>
 
                   <div className="mt-auto space-y-6">
-                    <Button 
+                    <Button
                       onClick={() => setQuoteModalOpen(true)}
                       className="w-full bg-[#8E8E8E] hover:bg-[#707070] text-white rounded-2xl py-8 text-2xl font-black flex items-center justify-center gap-3 transition-colors uppercase tracking-widest shadow-lg"
                     >
@@ -363,7 +363,7 @@ export default function CommercialSolarPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
+            <Button
               onClick={() => setQuoteModalOpen(true)}
               size="lg"
               className="bg-secondary text-white hover:bg-secondary/90 font-semibold px-10 shadow-lg shadow-secondary/20 transition-all hover:scale-105"
