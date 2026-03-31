@@ -8,7 +8,7 @@ export function WhatsAppButton() {
       href="https://wa.me/61435064555"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group"
+      className="fixed bottom-24 md:bottom-28 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 group"
       aria-label="Contact us on WhatsApp"
     >
       <svg

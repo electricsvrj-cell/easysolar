@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { BrandsSection } from "@/components/brands-section"
+import { RebateCountdownBanner } from "@/components/rebate-countdown-banner"
 
 const residentialServices = [
   {
@@ -136,21 +137,33 @@ const features = [
 const testimonials = [
   {
     name: "Sarah Mitchell",
-    location: "Sydney, NSW",
+    location: "",
     rating: 5,
     text: "Excellent service from start to finish. The team was professional and our electricity bills have dropped by 80%. Highly recommend!"
   },
   {
     name: "James Chen",
-    location: "Melbourne, VIC",
+    location: "",
     rating: 5,
     text: "Great communication throughout the process. The 10kW system they installed is performing above expectations. Very happy with our decision."
   },
   {
     name: "Lisa Thompson",
-    location: "Brisbane, QLD",
+    location: "",
     rating: 5,
-    text: "Best investment we&apos;ve made for our home. The quality of panels and installation was top-notch. Our energy bills are now almost zero!"
+    text: "Best investment we have made for our home. The quality of panels and installation was top-notch. Our energy bills are now almost zero!"
+  },
+  {
+    name: "Pete",
+    location: "",
+    rating: 4,
+    text: "Uper Solar Service – Late last year we engaged Easy Solar Solutions to install our solar system. The process from sales to switch-on was well managed with us being updated on each step as they occured. The sales consultant was extremely knowledgable and at no stage was pushy, or rushed us to make decisions."
+  },
+  {
+    name: "James M",
+    location: "",
+    rating: 5,
+    text: "Great Service & Quality Product – Very happy with the pre and post sales service plus it's a quality system with excellent warranty terms. Would definitely recommend Easy Solar Solution."
   }
 ]
 
@@ -180,15 +193,15 @@ export default function HomePage() {
           >
             <CarouselContent>
               {[
-                { 
-                  src: "/images/easter-special.png", 
+                {
+                  src: "/images/easter-special.png",
                   mobSrc: "/images/mob-slider-1.png.jpeg",
-                  alt: "Easter Special Solar Energy 48kWh" 
+                  alt: "Easter Special Solar Energy 48kWh"
                 },
-                { 
-                  src: "/images/easter-special-2.png", 
+                {
+                  src: "/images/easter-special-2.png",
                   mobSrc: "/images/mob-slider-2.png.jpeg",
-                  alt: "Easter Special Solar Energy 27kWh" 
+                  alt: "Easter Special Solar Energy 27kWh"
                 }
               ].map((item, index) => (
                 <CarouselItem key={index}>
@@ -405,6 +418,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Referral Section */}
+      <section className="w-full">
+        <Image
+          src="/images/refer-friend.jpeg"
+          alt="Refer a Friend"
+          width={1920}
+          height={600}
+          className="w-full h-auto"
+        />
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-16 lg:py-24 bg-secondary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -492,27 +516,49 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card rounded-2xl p-6 border border-border">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-foreground mb-6">&ldquo;{testimonial.text}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold">{testimonial.name.charAt(0)}</span>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="h-full p-2">
+                    <div className="bg-card rounded-2xl p-6 border border-border h-full flex flex-col">
+                      <div className="flex gap-1 mb-4 text-yellow-500">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-5 w-5 ${i < testimonial.rating ? 'fill-primary text-primary' : 'text-muted'}`}
+                          />
+                        ))}
+                      </div>
+                      <p className="text-foreground mb-6 flex-grow italic">&ldquo;{testimonial.text}&rdquo;</p>
+                      <div className="flex items-center gap-3 mt-auto">
+                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                          <span className="text-primary font-bold">{testimonial.name.charAt(0)}</span>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-foreground">{testimonial.name}</p>
+                          {testimonial.location && (
+                            <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
@@ -574,6 +620,7 @@ export default function HomePage() {
 
       <Footer />
       <QuoteModal open={quoteModalOpen} onOpenChange={setQuoteModalOpen} />
+      <RebateCountdownBanner onOpenModal={() => setQuoteModalOpen(true)} />
     </div>
   )
 }

@@ -28,7 +28,7 @@ export function BrandsSection() {
           {[...brands, ...brands, ...brands].map((brand, index) => (
             <div
               key={index}
-              className="inline-flex items-center justify-center px-12 h-24 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 pointer-events-none sm:pointer-events-auto"
+              className="inline-flex items-center justify-center px-12 h-24 hover:scale-110 transition-all duration-300 pointer-events-none sm:pointer-events-auto"
             >
               <div className="relative w-48 h-16 flex items-center justify-center p-2">
                 <Image
