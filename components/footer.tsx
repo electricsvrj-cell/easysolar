@@ -5,7 +5,7 @@ import { Sun, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-
 
 export function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0b2a4d' }} className="text-primary-foreground">
+    <footer style={{ backgroundColor: '#0b2a4d' }} className="text-primary-foreground pb-48 md:pb-28">
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
