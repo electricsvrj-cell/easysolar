@@ -516,6 +516,29 @@ export default function SolarSystem13KW() {
         </div>
       </section>
 
+      {/* Areas Served Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#3e70b5] mb-12 font-[family-name:var(--font-space-grotesk)] text-center">
+            Areas Served
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              "Melbourne", "Geelong", "Ballarat", "Bendigo", 
+              "Sunbury", "Melton", "Craigieburn", "Frankston"
+            ].map((location) => (
+              <Link 
+                key={location} 
+                href={`/13-kw-solar-installation-${location.toLowerCase()}/`}
+                className="flex items-center justify-center p-4 rounded-xl border-2 border-muted hover:border-[#ffca08] hover:shadow-md transition-all text-center font-semibold text-foreground/80 hover:text-[#3e70b5] bg-muted/20"
+              >
+                13 kW Solar Installation {location}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <BrandsSection />
       <Footer />
       <QuoteModal open={quoteModalOpen} onOpenChange={setQuoteModalOpen} />
