@@ -94,7 +94,7 @@ export function Footer() {
                 <div>
                   <p className="font-medium">Visit Us</p>
                   <p className="text-primary-foreground/80">
-                    86 Hotham St, Preston VIC 3072
+                    3/27 Synnot St, Werribee VIC 3030
                   </p>
                 </div>
               </li>
