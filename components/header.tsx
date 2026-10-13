@@ -98,6 +98,13 @@ export function Header() {
               </Link>
 
               <Link
+                href="/blog"
+                className="text-foreground hover:text-primary font-medium transition-colors"
+              >
+                Blog
+              </Link>
+
+              <Link
                 href="/contact"
                 className="text-foreground hover:text-primary font-medium transition-colors"
               >
@@ -168,6 +175,14 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Commercial Solar
+              </Link>
+
+              <Link
+                href="/blog"
+                className="block py-3 text-foreground hover:text-primary font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </Link>
 
               <Link

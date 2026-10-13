@@ -45,6 +45,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/residential/6-6kw-solar-system" className="text-primary-foreground/80 hover:text-secondary transition-colors">
                   6.6 KW Solar System
                 </Link>
